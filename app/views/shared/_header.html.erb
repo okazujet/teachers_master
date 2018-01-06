@@ -1,0 +1,53 @@
+<div class="header">
+  <ul class="header__nav">
+    <%= link_to root_path do %>
+      <h1>家庭教師</h1>
+    <% end %>
+    <li id="menu">
+      <%= fa_icon "bars 5x", id: "menu-open-icon" %>
+      <div class="menu-open">
+      <ul>
+        <li>
+          <%= link_to "生徒登録", new_student_registration_path %>
+        </li>
+        <li>
+          <%= link_to "講師登録", new_teacher_registration_path %>
+        </li>
+        <li>
+          <%= link_to "講師としてログインする", new_teacher_session_path %>
+        </li>
+        <li>
+          <%= link_to "生徒としてログインする", new_student_session_path %>
+        </li>
+        <% if teacher_signed_in? %>
+          <li>
+            <%= link_to "ログアウト", destroy_teacher_session_path, method: :delete %>
+          </li>
+        <% elsif student_signed_in? %>
+          <li>
+            <%= link_to "ログアウト", destroy_student_session_path, method: :delete %>
+          </li>
+        <% end %>
+        <li>
+          このサイトについて
+        </li>
+        <li>
+          <%= link_to "設定", new_subject_path %>
+        </li>
+      </ul>
+    </div>
+    </li>
+    <li id="home" class="list-right">
+      <% if teacher_signed_in? %>
+        <%= link_to teacher_path(current_teacher) do %>
+          <%= fa_icon("home 5x") %>
+        <% end %>
+      <% end %>
+    </li>
+    <li id="cog" class="list-right">
+      <%= link_to search_teachers_path do %>
+        <%= fa_icon("search 5x") %>
+      <% end %>
+    </li>
+  </ul>
+</div>

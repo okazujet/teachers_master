@@ -1,0 +1,85 @@
+@import 'mixin_colors';
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  overflow: scroll;
+}
+
+.teacher-container {
+    width: 50%;
+    margin-top: 40px;
+
+    img {
+      background-size: cover;
+      height: 380px;
+      width: 80%;
+      border-radius: 200px;
+      display: block;
+      margin: 50px auto;
+      box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.4);
+    }
+}
+
+.teacher {
+
+  &__detail{
+    padding-left: 30px;
+    width: 80%;
+  }
+
+  &__age {
+    display: inline;
+    font-size: 40px;
+    @include text-shadow();
+  }
+
+  &__name {
+    display: inline;
+    font-size: 40px;
+    text-align: center;
+    @include text-shadow();
+  }
+
+  &__profile {
+    margin-left: 15px;
+    font-size: 20px;
+    height: 100px;
+    @include text-shadow();
+
+  }
+}
+
+.paginate-wrapper {
+  width: 100%;
+
+  .pagination {
+    margin:30px 0 30px;
+    width: 400px;
+    font-size: 40px;
+    margin-left: 30px;
+
+    .current {
+      color: $color;
+    }
+
+    a:link {
+      color: black;
+    }
+
+    a:visited {
+      color: black;
+    }
+
+    a:hover {
+      color: $color;
+    }
+
+    span {
+      background-color: white;
+      border: 1px solid black;
+      border-radius: 6px;
+      padding: 10px;
+    }
+  }
+}

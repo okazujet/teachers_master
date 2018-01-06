@@ -1,0 +1,58 @@
+<div class="form-container">
+  <div class="form">
+    <div class="form__title">
+      <h2>生徒登録</h2>
+    </div>
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+
+      <div class="field">
+        <%= f.label :name, "名前を入力" %><br />
+        <%= f.text_field :name, autofocus: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :age, "年齢を入力" %><br />
+        <%= f.number_field :age, autofocus: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :address, "住所を入力" %><br />
+        <%= f.text_field :address, autofocus: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :subject, "教科を入力" %><br />
+        <%= f.text_field :subject, autofocus: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :email, "メールアドレスを入力" %><br />
+        <%= f.email_field :email, autofocus: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password, "パスワードを入力" %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password_confirmation, "パスワードを再度入力" %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      </div>
+
+      <div class="actions">
+        <%= button_tag type: "submit", class: "button", style: "width:462px;margin-bottom:15px;" do%>
+          <%= fa_icon("sign-in") %>
+          新規登録
+        <% end %>
+  <% end %>
+
+    <%= render "teachers/shared/links" %>
+    </div>
+  </div>
+</div>

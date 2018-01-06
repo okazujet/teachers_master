@@ -1,0 +1,68 @@
+.form-container {
+  .form {
+    width: 70%;
+    background-color: white;
+    margin: 200px auto;
+    border-radius: 6px;
+    position: relative;
+    padding: 14px 18px;
+    border: 1px solid black;
+
+    &__title {
+      margin-bottom: 10px;
+
+      h2 {
+        font-size: 100px;
+      }
+    }
+
+    .field {
+      input {
+        border: 1px solid #a6a6a6;
+        border-top-color: #949494;
+        border-radius: 3px;
+        box-shadow: 0 1px 0 rgba(255,255,255,.5), 0 1px 0 rgba(0,0,0,.07) inset;
+        height: 40px;
+        width: 500px;
+        margin: 10px 0 30px;
+        font-size: 60px;
+        height: 80px;
+      }
+
+      label {
+        font-size: 45px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+.wrapper {
+  padding-top: 200px;;
+}
+
+.actions {
+  font-size: 80px;
+}
+
+.button {
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 410px;
+}
+
+#teacher_subject_ids {
+    height: 100px;
+    width: 150px;
+    font-size: 50px;
+}
+
+#teacher_image {
+  font-size: 30px;
+}
+
+#check_boxes {
+  input {
+    width: 130px;
+  }
+}
